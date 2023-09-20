@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="text">
+    <p>Tools Looking Glass</p>
+  </div>
+  <hr>
+  <div class="tools">
+    <mat-radio-group aria-label="Select an option">
+      <mat-radio-button value="1">Ping</mat-radio-button>
+      <mat-radio-button value="2">Trace</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <div class="ip-dress">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>IP address or prefix</mat-label>
+        <input matInput placeholder="http://175.41.239.250:8000">
+      </mat-form-field>
+    </form>
+  </div>
+  <div class="router">
+    <mat-form-field class="example-full-width">
+      <mat-label>Router</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{food.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <section>
+    <div class="example-label">Raised</div>
+    <div class="example-button-row">
+      <button mat-raised-button color="primary">Run</button>
+      <button mat-raised-button color="accent">Reset</button>
+    </div>
+  </section>
+</div>
